@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import axios from 'axios'
 import { ElMessage } from 'element-plus'
 
-const BASE_URL = 'http://localhost:3000/api'
+const BASE_URL = 'https://show-x749.onrender.com/api'
 
 const request = axios.create({
   baseURL: BASE_URL,
