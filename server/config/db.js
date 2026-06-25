@@ -6,7 +6,7 @@ const dbConfig = {
   port: 3306,
   user: 'u_Nm7PtN',
   password: 'hACYh3kbIzcx', // 删掉中文，只留纯密码，前后不要有空格
-  database: 'freedb_pNLI7g2Z',
+  database: 'freedb_pNLl7g2Z',
 }
 
 // 创建连接池（正确写法）
