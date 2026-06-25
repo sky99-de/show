@@ -2,19 +2,16 @@
 const mysql = require('mysql2/promise')
 
 // 你的数据库配置（和Navicat完全一致）
-const dbConfig = {
-  host: 'localhost',
+const db = mysql.createConnection({
+  host: 'sql.freedb.tech',
   port: 3306,
-  user: 'root',
-  password: '123456',
-  database: 'dorm_management',
-  connectionLimit: 10,
-  charset: 'utf8mb4',
-  timezone: '+08:00',
-}
+  user: 'u_Nm7PtN',
+  password: '你的数据库密码',
+  database: 'freedb_pNLI7g2Z',
+})
 
 // 创建连接池
-const pool = mysql.createPool(dbConfig)
+const pool = mysql.createPool(db)
 
 // 测试数据库连接
 const testDbConnection = async () => {
