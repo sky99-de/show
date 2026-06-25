@@ -86,12 +86,14 @@
 
 <script setup>
 import { ref, reactive } from 'vue'
-import { useRouter } from 'vue-router' // 1. 必须先导入
+import { useRouter } from 'vue-router'
 import { useUserStore } from '@/stores/user'
 import { ElMessage } from 'element-plus'
 
+// 新增这一句
+const router = useRouter()
+
 const userStore = useUserStore()
-const router = useRouter() // 2. 在这里声明一次，不要在函数里声明！
 
 // 状态
 const isRegister = ref(false)
@@ -182,9 +184,9 @@ const submit = async () => {
 
           setTimeout(() => {
             if (form.role === 'admin') {
-              window.location.href = '/admin/dashboard'
+              router.push('/admin/dashboard')
             } else {
-              window.location.href = '/student/home'
+              router.push('/student/home')
             }
           }, 300)
         }
